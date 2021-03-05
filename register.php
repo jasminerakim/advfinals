@@ -10,7 +10,7 @@
             $usernameErr = 'Please enter a username';
         }
         else if(strlen(trim($_POST['username'])) > 10 || !preg_match('/^[a-zA-Z0-9]+$/', $_POST['username'])) {
-            $usernameErr = 'Username should accept only alphanumeric limit 10 characters';
+            $usernameErr = 'Username must not exceed to 10 characters';
         }
         else {
             $sql = 'SELECT * FROM users WHERE username = ?';
